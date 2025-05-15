@@ -1,7 +1,11 @@
+// import Codepoint from './pages/test-code';
+import Counter from './pages/counter';
+
 function App() {
   return (
     <>
-      <h1>hello this is my app</h1>
+    {/*  <Codepoint />  This is component that is imported from test-code.jsx */}
+    <Counter/>
     </>
   );
 }
