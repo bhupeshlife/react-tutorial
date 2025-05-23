@@ -28,49 +28,19 @@ function Counter() {
   };
 
   return (
-    <div
-      style={{
-        fontFamily: "Arial, sans-serif",
-        maxWidth: "300px",
-        margin: "40px auto",
-        padding: "20px",
-        border: "1px solid #ccc",
-        borderRadius: "10px",
-        textAlign: "center",
-        backgroundColor: "#f9f9f9",
-      }}
-    >
-      <h1 style={{ color: "#333", fontSize: "24px", marginBottom: "20px" }}>
-        Counter Component
-      </h1>
-      <p style={{ fontSize: "18px", marginBottom: "20px" }}>
-        Current count: {counter}
-      </p>
-      {/* {counter} is evaluation expression */}
+     <div className="font-sans max-w-[300px] mx-auto mt-10 p-5 border border-gray-300 rounded-xl text-center bg-gray-100">
+      <h1 className="text-gray-800 text-2xl mb-5">Counter Component</h1>
+      <p className="text-lg mb-5">Current count: {counter}</p>
+
       <button
-        style={{
-          padding: "10px 20px",
-          marginBottom: "10px",
-          backgroundColor: "#4CAF50",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-        }}
+        className="px-5 py-2 mb-2 bg-green-600 text-white rounded-md hover:bg-green-700 cursor-pointer"
         onClick={addValue}
       >
         Add Value
       </button>
       <br />
       <button
-        style={{
-          padding: "10px 20px",
-          backgroundColor: "#f44336",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-        }}
+        className="px-5 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 cursor-pointer"
         onClick={removeValue}
       >
         Remove Value

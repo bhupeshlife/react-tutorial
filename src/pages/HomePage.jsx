@@ -3,12 +3,11 @@ import Counter from "../components/Counter";
 import Card from "../components/Card";
 
 function HomePage() {
-  let myObject = {
+  let userDetail = {
     name: "Bhupesh",
     age: 23,
     address: {
       city: "Nagpur",
-      state: "Maharashtra",
     },
   };
 
@@ -26,7 +25,7 @@ function HomePage() {
       }}
     >
       <Counter />
-      <Card userName="Bhupesh" myObject={myObject} myArray={myArray} />
+      <Card userName="Bhupesh" userDetail={userDetail} myArray={myArray} />
       {/* userName=Bhupesh is a props which i passed to <Card/> component */}
       {/* myObject={myObject} is a props which i passed to <Card/> component */}
       {/* myArray={myArray} is a props which i passed to <Card/> component */}
