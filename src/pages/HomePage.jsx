@@ -1,6 +1,6 @@
 import React from "react";
 import Counter from "../components/Counter";
-import Card from "../components/card";
+import Card from "../components/Card";
 
 function HomePage() {
   let myObject = {
