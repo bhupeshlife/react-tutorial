@@ -3,33 +3,28 @@ import { useState } from "react";
 function Counter() {
   // 1. Declare a state variable "counter" starting at 0,
   //    and a function "setCounter" to update it.
-  const [counter, setCounter] = useState(0);
+  let [counter, setCounter] = useState(0);
 
   // 2. Handler to increase the counter
   const addValue = () => {
-    // Use the setter to update based on the previous value
-    setCounter(prevCount => {
-      const next = prevCount + 1;
-      // Prevent going above 20
-      if (next > 20) {
-        alert("Counter cannot be greater than 20");
-        return 20;
-      }
-      return next;
-    });
+    if (counter > 20) {
+      alert("Counter cannot be greater than 20");
+      counter = 20;
+    }
+    setCounter(counter + 1);
+    // setCounter is a function that updates the state variable counter
+    console.log("Counter after addValue", counter);
   };
 
   // 3. Handler to decrease the counter
   const removeValue = () => {
-    setCounter(prevCount => {
-      const next = prevCount - 1;
-      // Prevent going below 0
-      if (next < 0) {
-        alert("Counter cannot be less than 0");
-        return 0;
-      }
-      return next;
-    });
+    if (counter < 0) {
+      alert("Counter cannot be less than 0");
+      counter = 0;
+    }
+    setCounter(counter - 1);
+    // setCounter is a function that updates the state variable counter
+    console.log("Counter after removeValue", counter);
   };
 
   // 4. Render the UI
@@ -37,7 +32,7 @@ function Counter() {
     <div className="font-sans max-w-[300px] mx-auto mt-10 p-5 border border-gray-300 rounded-xl text-center bg-gray-100">
       {/* Title */}
       <h1 className="text-gray-800 text-2xl mb-5">Counter Component</h1>
-      
+
       {/* Display current count */}
       <p className="text-lg mb-5">Current count: {counter}</p>
 
