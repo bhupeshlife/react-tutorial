@@ -9,13 +9,19 @@ function HomePage() {
         className="border rounded-lg p-2 bg-gray-500 text-white"
         onClick={() => navigate("/counter")}
       >
-        Counter Page
+        useState Topic
       </button>
       <button
         className="border rounded-lg p-2 bg-gray-500 text-white"
         onClick={() => navigate("/card")}
       >
-        Card Page
+        Props Topic
+      </button>
+       <button
+        className="border rounded-lg p-2 bg-gray-500 text-white"
+        onClick={() => navigate("/bg-changer")}
+      >
+        Theme Topic
       </button>
     </div>
   );
