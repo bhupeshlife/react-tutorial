@@ -6,22 +6,28 @@ function HomePage() {
     // 4. Return your page layout. Here we use Tailwind CSS classes
     <div className="flex flex-row items-center justify-center min-h-screen gap-5 p-5">
       <button
-        className="border rounded-lg p-2 bg-gray-500 text-white"
+        className="border rounded-lg p-2 bg-black text-white"
         onClick={() => navigate("/counter")}
       >
         useState Topic
       </button>
       <button
-        className="border rounded-lg p-2 bg-gray-500 text-white"
+        className="border rounded-lg p-2 bg-black text-white"
         onClick={() => navigate("/card")}
       >
         Props Topic
       </button>
-       <button
-        className="border rounded-lg p-2 bg-gray-500 text-white"
+      <button
+        className="border rounded-lg p-2 bg-black text-white"
         onClick={() => navigate("/bg-changer")}
       >
         Theme Topic
+      </button>
+      <button
+        className="border rounded-lg p-2 bg-black text-white"
+        onClick={() => navigate("/password-generator")}
+      >
+        Password Generator
       </button>
     </div>
   );
