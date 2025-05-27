@@ -4,7 +4,7 @@ const Counter = lazy(() => import("../components/Counter"));
 const Card = lazy(() => import("../pages/CardContent"));
 const BgChanger = lazy(() => import("../components/BgChanger"));
 const PasswordGenerator = lazy(() => import("../components/PasswordGenerator"));
-const CurrencyConverter = lazy(() => import("../components/CurrencyConverter"));
+const CurrencyConverter = lazy(() => import("../components/currency-converter/CurrencyConverter"));
 import NotFound from "../components/NotFound";
 
 const routes = [
