@@ -40,61 +40,63 @@ function PasswordGenerator() {
   }, [length, numbers, characters, PasswordGenerator]);
 
   return (
-    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-white bg-gray-800">
-      <h1 className="text-white text-center my-3">Password Generator</h1>
-      <div className="flex shadow rounded-lg overflow-hidden bg-white text-black">
-        <input
-          type="text"
-          value={password}
-          className="outline-none w-full py-1 px-3"
-          placeholder="Password"
-          ref={passwordRef}
-          readOnly
-        />
-        <button
-          className="cursor-pointer outline-none bg-blue-500 text-white px-3 py-0.5 shrink-0 hover:bg-blue-600 transition-colors duration-200"
-          onClick={copyPassword}
-        >
-          Copy
-        </button>
-      </div>
-      <div className="flex text-sm gap-x-2 py-3">
-        <div className="flex items-center gap-x-1">
+    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat bg-blue-200">
+      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-white bg-gray-800">
+        <h1 className="text-white text-center my-3">Password Generator</h1>
+        <div className="flex shadow rounded-lg overflow-hidden bg-white text-black">
           <input
-            type="range"
-            min={6}
-            max={50}
-            value={length}
-            className="cursor-pointer"
-            onChange={(e) => {
-              setLength(e.target.value);
-            }}
+            type="text"
+            value={password}
+            className="outline-none w-full py-1 px-3"
+            placeholder="Password"
+            ref={passwordRef}
+            readOnly
           />
-          <label> Length : {length}</label>
+          <button
+            className="cursor-pointer outline-none bg-blue-500 text-white px-3 py-0.5 shrink-0 hover:bg-blue-600 transition-colors duration-200"
+            onClick={copyPassword}
+          >
+            Copy
+          </button>
         </div>
-        <div className="flex items-center gap-x-1">
-          <input
-            type="checkbox"
-            defaultChecked={numbers}
-            id="numbersInput"
-            className="cursor-pointer"
-            onChange={(e) => {
-              setNumbers((prev) => !prev);
-            }}
-          />
-          <label htmlFor="numbersInput">Numbers</label>
-        </div>
-        <div className="flex items-center gap-x-1">
-          <input
-            type="checkbox"
-            defaultChecked={characters}
-            className="cursor-pointer"
-            id="charactersInput"
-            onChange={(e) => {
-              setCharacters((prev) => !prev);
-            }}
-          />
-          <label htmlFor="charactersInput">Characters</label>
+        <div className="flex text-sm gap-x-2 py-3">
+          <div className="flex items-center gap-x-1">
+            <input
+              type="range"
+              min={6}
+              max={50}
+              value={length}
+              className="cursor-pointer"
+              onChange={(e) => {
+                setLength(e.target.value);
+              }}
+            />
+            <label> Length : {length}</label>
+          </div>
+          <div className="flex items-center gap-x-1">
+            <input
+              type="checkbox"
+              defaultChecked={numbers}
+              id="numbersInput"
+              className="cursor-pointer"
+              onChange={(e) => {
+                setNumbers((prev) => !prev);
+              }}
+            />
+            <label htmlFor="numbersInput">Numbers</label>
+          </div>
+          <div className="flex items-center gap-x-1">
+            <input
+              type="checkbox"
+              defaultChecked={characters}
+              className="cursor-pointer"
+              id="charactersInput"
+              onChange={(e) => {
+                setCharacters((prev) => !prev);
+              }}
+            />
+            <label htmlFor="charactersInput">Characters</label>
+          </div>
         </div>
       </div>
     </div>

@@ -70,7 +70,7 @@ function CurrencyConverter() {
                 amountDisabled
               />
             </div>
-            <button className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+            <button className="w-full bg-blue-600 text-white mt-2 px-4 py-3 rounded-lg">
               Convert {fromCurrency.toUpperCase()} to {toCurrency.toUpperCase()}
             </button>
           </form>
